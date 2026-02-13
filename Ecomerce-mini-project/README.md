@@ -1,6 +1,4 @@
-Absolutely! I can create a **complete documentation** for your **Mini Project: E-commerce Backend** based on the details you shared. Here’s a structured document you can use for submission or reference.
 
----
 
 # **Mini Project Documentation: E-commerce Backend**
 
