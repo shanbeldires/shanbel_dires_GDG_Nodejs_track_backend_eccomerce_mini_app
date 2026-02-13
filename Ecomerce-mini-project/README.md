@@ -2,11 +2,6 @@
 
 # **Mini Project Documentation: E-commerce Backend**
 
-**Deadline:** February 6, 2026
-**Project Type:** Backend API
-**Technology Stack:** Node.js, Express.js, MongoDB (Atlas), Mongoose
-
----
 
 ## **1. Project Overview**
 
@@ -16,24 +11,9 @@ This project is a **simple E-commerce backend API** that allows users to:
 * Add products to a cart
 * Place orders
 
-The goal is to demonstrate understanding of **Node.js, Express, REST API principles, CRUD operations, and MongoDB integration using Mongoose**.
 
-The project structure follows **MVC (Model-View-Controller)**, separating models, controllers, and routes for maintainable code.
 
----
-
-## **2. Learning Objectives**
-
-By completing this project, you should be able to:
-
-1. Apply **REST API design** and **CRUD operations**.
-2. Connect **Express.js** to **MongoDB Atlas** and manage data using **Mongoose models**.
-3. Implement **input validation** and **error handling**.
-4. Test endpoints using **Postman** and document responses.
-
----
-
-## **3. Folder Structure**
+## **2. Folder Structure**
 
 ```
 ecommerce-mini-project/
@@ -242,12 +222,6 @@ POST /cart
 | Code Quality                | Clean, readable, consistent naming                 |
 | Testing & Documentation     | Postman collection with example requests/responses |
 
----
 
-✅ **Project meets all requirements if all endpoints work, validations are in place, and Postman tests pass.**
 
----
 
-I can also make a **ready-to-use Postman documentation JSON** with **all endpoints, sample requests, and responses** for your submission.
-
-Do you want me to do that next?
