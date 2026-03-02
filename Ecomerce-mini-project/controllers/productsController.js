@@ -4,6 +4,7 @@ import validProduct from "../validation/productValidation.js";
 export const getProducts=async(req,res)=>{
     try{
       const productData=await product.find();
+        
       if(!productData){
         return res.status(404).json({message:"no products found"})
       }
@@ -16,9 +17,10 @@ export const getProducts=async(req,res)=>{
 }
 
 export const getProductsById=async(req,res)=>{
-    const {id}=req.params
     try{
+     const {id}=req.params
      const productData=await product.findById(id);
+        
      if(!productData){
         return res.status(404).json({message:"product not found"})
       }
@@ -36,7 +38,12 @@ export const createProducts=async(req,res)=>{
     const {name,price,description,category,image,stock}=req.body;
 
     if(!name||!price||!description||!category||!image||!stock){
-        return res.status(400).json({message:"all fields are required",error:error.details[0].message})
+        return res.status(400).json({message:"all fields are required"})
+    }
+     if (error) {
+        return res.status(400).json({
+            message: error.details[0].message
+        })
     }
     const productData=new product({name,price,description,category,image,stock});
       if(price<0){
@@ -57,9 +64,15 @@ export const updateProductsById=async(req,res)=>{
     const{id}=req.params;
     const {error}=validProduct.validate(req.body)
     const {name,price,description,category,image,stock}=req.body;
+        
     if(!name||!price||!description||!category||!image||!stock){
-        return res.status(400).json({message:"all fields are required",error:error.details[0].message})
+        return res.status(400).json({message:"all fields are required"})
     
+    }
+     if (error) {
+        return res.status(400).json({
+            message: error.details[0].message
+        })
     }
       const productData=await product.findByIdAndUpdate(id,{name,price,description,category,image,stock},{new:true});
       return res.status(200).json({message:"product updated successfully",data:productData})
